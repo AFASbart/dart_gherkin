@@ -34,6 +34,12 @@ class TestConfiguration {
   /// see https://docs.cucumber.io/cucumber/tag-expressions/ for expression syntax
   String? tagExpression;
 
+  /// A filter to prevent features that are run based on tags.
+  ///
+  /// Instead of only running features that have this tag, we prevent features
+  /// running that **do** have this tag.
+  String? preventTagExpression;
+
   /// The default step timeout - this can be override when definition a step definition
   Duration defaultTimeout = const Duration(seconds: 10);
 
